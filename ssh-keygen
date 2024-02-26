@@ -1,1 +1,5 @@
+# Create ssh-keygen
 ssh-keygen -t rsa -b 4096 -C "SNB-TECH" -f ~/.ssh/my-new-key
+
+# Create "pem-file"
+ssh-keygen -f /home/farooq/.ssh/my-new-key.pub -e -m pem > my-new-key.pem
