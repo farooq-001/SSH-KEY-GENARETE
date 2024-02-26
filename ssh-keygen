@@ -3,3 +3,12 @@ ssh-keygen -t rsa -b 4096 -C "SNB-TECH" -f ~/.ssh/my-new-key
 
 # Create "pem-file"
 ssh-keygen -f /home/farooq/.ssh/my-new-key.pub -e -m pem > my-new-key.pem
+
+# Permistions
+chmod 600 /home/farooq/.ssh/my-new-key.pub
+chmod 600 /home/farooq/.ssh/my-new-key
+chmod 600 /home/farooq/my-new-key.pem
+
+# Login command 
+ssh -i  my-new-key.pem  SNB-TECH@ <IP-ADDRESS>
+ssh -i  .ssh/my-ssh-key  SNB-TECH@ <IP-ADDRESS>
